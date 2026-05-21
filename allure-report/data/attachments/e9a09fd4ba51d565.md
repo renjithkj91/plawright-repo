@@ -1,0 +1,68 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "logo" [ref=e8] [cursor=pointer]:
+      - /url: index.php
+      - img "logo" [ref=e9]
+    - navigation [ref=e14]:
+      - list [ref=e16]:
+        - listitem [ref=e17]:
+          - link "Home" [ref=e18] [cursor=pointer]:
+            - /url: index.php
+        - listitem [ref=e19]:
+          - link "Input Form" [ref=e20] [cursor=pointer]:
+            - /url: simple-form-demo.php
+        - listitem [ref=e21]:
+          - link "Date Pickers" [ref=e22] [cursor=pointer]:
+            - /url: date-picker.php
+        - listitem [ref=e23]:
+          - link "Table" [ref=e24] [cursor=pointer]:
+            - /url: table-pagination.php
+        - listitem [ref=e25]:
+          - link "Progress Bars" [ref=e26] [cursor=pointer]:
+            - /url: jquery-progress-bar.php
+        - listitem [ref=e27]:
+          - link "Alerts and Modals" [ref=e28] [cursor=pointer]:
+            - /url: bootstrap-alert.php
+        - listitem [ref=e29]:
+          - link "List Box" [ref=e30] [cursor=pointer]:
+            - /url: bootstrap-dual-list.php
+        - listitem [ref=e31]:
+          - link "Others" [ref=e32] [cursor=pointer]:
+            - /url: drag-drop.php
+  - generic [ref=e35]:
+    - generic [ref=e38]:
+      - generic [ref=e39]: Menu
+      - list [ref=e40]:
+        - listitem [ref=e41]:
+          - link "Bootstrap Date Picker" [ref=e42] [cursor=pointer]:
+            - /url: date-picker.php
+        - listitem [ref=e43]:
+          - link "Jquery Date Picker" [ref=e44] [cursor=pointer]:
+            - /url: jquery-date-picker.php
+    - generic [ref=e45]:
+      - generic [ref=e47]:
+        - generic [ref=e48]: Date Picker
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Enter Date
+            - generic [ref=e53]:
+              - textbox [ref=e54]: 12/02/1997
+              - generic [ref=e57]: 
+          - button "Show Date" [ref=e58] [cursor=pointer]
+          - generic [ref=e59]: "Date :"
+      - generic [ref=e61]:
+        - generic [ref=e62]: Date Range Picker
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]: Enter Dates
+            - generic [ref=e67]:
+              - textbox [ref=e68]: 05/12/2026 - 05/12/2026
+              - generic [ref=e71]: 
+          - button "Show Date" [ref=e72] [cursor=pointer]
+          - generic [ref=e73]: "Date Range :"
+  - contentinfo [ref=e74]:
+    - paragraph [ref=e77]: © 2021 Obsqura Testing, All Rights Reserved.
+```

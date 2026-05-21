@@ -1,0 +1,17 @@
+import{test, expect} from '@playwright/test'
+test('Contat details update', async({page})=>{
+    await page.goto('https://groceryapp.uniqassosiates.com/admin/login')
+    await page.locator("//input[@name='username']").fill("admin")
+    await page.locator("//input[@name='password']").fill("admin")
+    await page.locator("//button[text()='Sign In']").click()
+    await page.goto('https://groceryapp.uniqassosiates.com/admin/list-contact')
+    //await page.locator('.btn btn-sm btn btn-primary btncss').click()
+    await page.locator("//i[@class='fas fa-edit']").click()
+    await page.locator('#phone').fill("8281000011")
+    await page.locator('#email').fill("rj.test@yopmail.com")
+    await page.locator("//textarea[@name='address']").fill("Trivandrum")
+    await page.locator("//button[@name='Update']").click()
+    const alertMsg = await page.locator("//div[@class='alert alert-success alert-dismissible']").textContent()
+    console.log(alertMsg)
+    await expect(page.locator("//div[@class='alert alert-success alert-dismissible']")).toBeVisible()
+})

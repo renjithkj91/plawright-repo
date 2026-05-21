@@ -1,0 +1,20 @@
+//An e2e testing check the complete flow of the application from start to finish like a real user
+import{test, expect} from '@playwright/test'
+test('Product checkout', async({page})=>{ 
+    await page.goto('https://www.saucedemo.com/')
+    const userNameTxt = page.locator('#user-name')
+    const passwordTxt = page.locator("//input[@data-test='password']")
+    const loginBtn = page.locator('#login-button')
+    await userNameTxt.fill("standard_user")
+    await passwordTxt.fill("secret_sauce")
+    await loginBtn.click()
+    await page.locator('#add-to-cart-sauce-labs-backpack').click()
+    await page.locator('//a[@data-test="shopping-cart-link"]').click()
+    await page.locator('#checkout').click()
+    await page.locator('#first-name').fill("First Name")
+    await page.locator('#last-name').fill("Last Name")
+    await page.locator('#postal-code').fill("123456")
+    await page.locator('#continue').click()
+    await page.locator('#finish').click()
+    await expect(page.locator('.complete-header')).toHaveText("Thank you for your order!")
+})
